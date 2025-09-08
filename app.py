@@ -8,12 +8,10 @@ ai=pickle.load(open('ao.pkl','rb'))
 app=Flask(__name__)
 
 @app.route("/")
-
 def home():
     return "server Running"
 
 @app.route("/predict")
-
 def predict():
     ir=request.args.get("ir")
     ir=int(ir)
@@ -22,5 +20,5 @@ def predict():
     return result
 
 if(__name__)=="__main__":
-
     app.run(host='0.0.0.0',port=4000)
+
